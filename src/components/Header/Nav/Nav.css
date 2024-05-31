@@ -1,0 +1,91 @@
+.navbar{
+    width: -webkit-fill-available;
+    float: right;
+}
+
+.navbar h6{
+    color: white;
+}
+
+.main-btn{
+    background-color: #00133D !important;
+}
+.second-btn{
+    background-color: #909090 !important;
+}
+
+.white-text{
+    color: white !important;
+}
+.black-text{
+    color: #333 !important;
+}
+.orange-text{
+    color: #00133D !important;
+}
+.blue-text{
+    color: #00c0fd !important;
+}
+
+.burgermenu{
+    padding: 0px 20px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white !important
+}
+.nav-item .active, .nav-item{
+    cursor: pointer;
+}
+.no-decoration{
+    color: white;
+    text-decoration: none;
+}
+/* active colour */
+.nav-item .active, .custom-active{
+    background-color: #00133D !important;
+    border: 1px solid #f2f1ee4e !important;
+}
+.custom-outline{
+    border: 1px solid #F2F1EE !important;
+}
+
+.navbar-collapse{
+    flex-basis: auto !important;
+}
+
+.top-right-nav{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+
+.leftside-nav{
+    width: 75% !important;
+}
+
+/* Main comtainer */
+.container-main{
+    width: -webkit-fill-available;
+    margin-left:2%;
+    margin-top: 50px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+    .leftside-nav{
+        width: 70% !important;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    .navbar{
+        margin-left: 280px !important;
+    }
+    .container-main{
+        margin-left: 290px !important;
+    }
+}
