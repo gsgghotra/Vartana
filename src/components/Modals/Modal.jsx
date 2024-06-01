@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import faunadb from 'faunadb';
-import NewErrorLog from '../../assets/errorLogs/NewErrorLog';
+import NewErrorLog from '../../errorLogs/NewErrorLog';
 var q = faunadb.query
 
 var client = new faunadb.Client({
@@ -11,7 +11,7 @@ var client = new faunadb.Client({
   endpoint: FAUNA_ENDPOINT,
 })
 
-const test = async () => {
+const v_error = async () => {
   // (application, logLevel, errorCode, message, additionalInfo)
   NewErrorLog("Vartana", "error", "E602", "Unexpected error", {data:'Hello', type:'testing'})
 };
