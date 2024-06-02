@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Alert from 'react-bootstrap/Button';
 import FilterSection from '../components/Filter/FilterSection';
 import ai_logo from '../assets/images/icons/ai_logo.svg';
+import { createSortingIndex } from '../db/Indexes';
 
 const q = faunadb.query;
 
@@ -18,27 +19,7 @@ const Logs = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Ensure the index is created (if not already done)
-    const createIndex = async () => {
-      try {
-        await client.query(
-          q.CreateIndex({
-            name: 'logs_by_applicationName_and_timestamp',
-            source: q.Collection('ApplicationLogs'),
-            terms: [{ field: ['data', 'applicationName'] }],
-            values: [
-              { field: ['data', 'timestamp'], reverse: true }, // reverse for descending order
-              { field: ['ref'] }
-            ]
-          })
-        );
-      } catch (error) {
-        // Index already exists
-        console.log('Index creation error or already exists:', error);
-      }
-    };
-
-    createIndex();
+    createSortingIndex();
 
     // Fetch logs from FaunaDB
     const fetchLogs = async () => {
