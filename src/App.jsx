@@ -6,6 +6,7 @@ import RootLayout from './components/layouts/RootLayout';
 import Logs from './pages/Logs';
 import NotFound from './pages/NotFound';
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>

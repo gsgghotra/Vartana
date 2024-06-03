@@ -1,4 +1,13 @@
 // List of applications
+import faunadb from 'faunadb';
+var q = faunadb.query;
+import NewErrorLog from '../errorLogs/NewErrorLog'
+
+var client = new faunadb.Client({
+  secret: FAUNA_SECRET,
+  // NOTE: Use the correct endpoint for your database's Region Group.
+  endpoint: FAUNA_ENDPOINT,
+})
 
 export const createApplicationsIndex = async () => {
     try {
@@ -16,12 +25,14 @@ export const createApplicationsIndex = async () => {
       );
       console.log('Applications index created:', result);
     } catch (error) {
-      console.error('Error creating applications index:', error);
+        //NewErrorLog("Vartana", {error}, "E603", "Unexpected errors", {data:'Hello', type:'testing'})
+        console.error('Error creating applications index:', error);
     }
 };
 
 // Ensure the index is created (if not already done)
 //List of errors
+
 export const createSortingIndex = async () => {
     try {
         await client.query(

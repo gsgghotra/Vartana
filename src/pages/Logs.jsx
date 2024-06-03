@@ -19,7 +19,7 @@ const Logs = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    createSortingIndex();
+    //createSortingIndex();
 
     // Fetch logs from FaunaDB
     const fetchLogs = async () => {

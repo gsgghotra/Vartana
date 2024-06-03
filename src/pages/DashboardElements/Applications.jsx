@@ -21,7 +21,7 @@ const Applications = () => {
     // Fetch the list of applications (assuming this is available)
     const fetchApplications = async () => {
       try {
-        createApplicationsIndex();
+        //createApplicationsIndex();
         const apps = await client.query(
           q.Paginate(q.Distinct(q.Match(q.Index('all_applications'))))
         );
@@ -68,8 +68,7 @@ const Applications = () => {
             onChange={(e) => setSelectedApp(e.target.value)}
           > */}
             {applications.map((app, index) => (
-                <>
-                    <Card style={{ width: '18rem', margin:'10px', float:'left'}}>
+                    <Card key={index} style={{ width: '18rem', margin:'10px', float:'left'}}>
                         <Card.Body>
                             <Card.Title>{app}</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -80,7 +79,6 @@ const Applications = () => {
                             {/* <Card.Link href="#">Another Link</Card.Link> */}
                         </Card.Body>
                     </Card>
-                </>
             ))}
           {/* </select> */}
         </div>
