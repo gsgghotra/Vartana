@@ -10,15 +10,15 @@ var client = new faunadb.Client({
 const NewErrorLog = (application, logLevel, errorCode, message, additionalInformation) => {
     console.log(application)
     const test = async () => {
-        try {
+        try { 
             // Insert a log entry into ApplicationLogs
             await client.query(
                 q.Create(
                 q.Collection('ApplicationLogs'),
                 {
                     data: {
-                    applicationName: application,
                     timestamp: q.Now(),
+                    applicationName: application,
                     logLevel: logLevel,
                     errorCode: errorCode,
                     message: message,

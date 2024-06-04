@@ -35,7 +35,7 @@ function Example({ show, handleClose }) {
       e.preventDefault();
       // You can perform further actions here, such as sending the data to a server or processing it in some way.
       console.log('Product details submitted:', product);
-      test();
+      v_error();
     };
 
   return (
