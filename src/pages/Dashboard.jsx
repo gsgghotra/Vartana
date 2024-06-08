@@ -5,10 +5,10 @@ import DashboardInfo from './DashboardElements/DashboardInfo';
 const Dashbaord =() => {
     return(
         <>
-            <main className='container-main'>
-                <h4>Dashboard</h4>
-                <div id="root">
-                    <div className="container pt-5 m-0">
+            <main className='container-main' style={{ width: '78%'}}>
+                <div id="root"  style={{height:'fitContent', overflowY:'scroll', borderRadius:'16px', margin:'20px 20px'}}>
+                    <h5 style={{ width: '98%', margin: '10px auto' }}>Dashboard</h5>
+                    <div className="container pt-1 mt-1 mb-3">
                         <div className="row align-items-stretch">
                             <DashboardInfo title="Applications" count="2" />
                             <DashboardInfo
@@ -20,8 +20,8 @@ const Dashbaord =() => {
                             <DashboardInfo title="Published Apps" count="0" />
                         </div>
                     </div>
-                    <div className="pt-5">
-                        <h4>Applications</h4>
+                    <h5 style={{ width: '98%', margin: '10px auto' }}>Applications</h5>
+                    <div className="container mb-3">
                         <Applications />
                     </div>
                 </div>

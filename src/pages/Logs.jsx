@@ -80,12 +80,12 @@ const Logs = () => {
 
   return (
     <>
-      <main className='container-main' style={{ width: '78%' }}>
-        <h3 style={{ width: '94%', margin: '20px auto' }}>Error Logs</h3>
-        <section style={{ position: 'absolute', marginTop: '0px', right: '100px' }}>
+      <main className='container-main' style={{ width: '78%'}}>
+        <h5 style={{ width: '94%', margin: '10px auto' }}>Error Logs</h5>
+        <section style={{ position: 'absolute', marginTop: '-15px', right: '100px' }}>
           <FilterSection />
         </section>
-        <div>
+        <div style={{height:'fitContent', overflowY:'scroll', borderRadius:'16px', margin:'20px 20px'}}>
           {logs.map((log, index) => (
             <Card key={index} style={{ position: 'relative', marginBottom: '8px', height:'150px' }}>
               <Card.Header style={{ paddingBottom: '3px' }}>
