@@ -1,0 +1,109 @@
+/* ErrorCard.css */
+.error-card {
+    position: relative;
+    border-radius: 16px;
+    display: flex;
+    background-color: #fff;
+    width: 98%;
+    margin: 20px auto;
+    max-height: 125px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  
+  .vartana-section {
+    background-color: #04143e; /* Blue color */
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    width: 36px;
+  }
+  
+  .vartana-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .error-card-content {
+    padding: 8px 20px;
+    max-width: 50%;
+    flex-grow: 1;
+  }
+  .error-card-suggestions {
+    padding: 8px 20px;
+    max-width: 40%;
+    flex-grow: 1;
+    display: flex;
+  }
+  
+  .error-header {
+    margin-bottom: 15px;
+  }
+  
+  .time {
+    font-size: 14px;
+    color: #4F4C4C;
+    margin-bottom: 2px;
+    background-color: #EBEBEB;
+    width: fit-content;
+    font-weight: 600;
+    padding: 3px 10px 3px 10px;
+    border-radius: 6px;
+    float: left;
+    margin-right: 15px;
+  }
+  
+  .error-header h4 {
+    font-size: 22px;
+    margin: 5px 0;
+  }
+
+  .error-header .text{
+    max-width: 98%;
+    max-height: 60px;
+    overflow: hidden;
+  }
+  
+  .error-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+  .error-footer {
+    color: grey;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: -8px;
+  }
+  
+  .button-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+  
+  .round-button {
+    background-color: #EDF2F7;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    align-items: center;
+    justify-content: center;
+  }
+  

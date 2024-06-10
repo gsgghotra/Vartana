@@ -1,0 +1,46 @@
+/* CardStyles.css */
+.er-card {
+    border-radius: 12px;
+    margin-top: 3px;
+    height: 100px;
+    width: 50%;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* border:1px solid purple; */
+  }
+
+  .er-body{
+    padding: 10px;
+  }
+  
+  .icon-placeholder {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .high-priority-card .er-body{
+    background-color: #ffffff;
+    color: rgb(1, 1, 1);
+  }
+  
+  .ai-suggestion-card {
+    background-color: #868686;
+    color: rgb(255, 255, 255);
+  }
+  .er-card-title{
+    display: block;
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
+    font-weight: 900;
+    font-size: 13px;
+    padding: 3px 10px;
+    letter-spacing: 0.11cap;
+    height: 28px;
+  }
+  
+  .high-priority-card {
+    background-color: #868686;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  

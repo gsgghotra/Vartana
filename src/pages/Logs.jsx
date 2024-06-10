@@ -5,6 +5,8 @@ import Alert from 'react-bootstrap/Button';
 import FilterSection from '../components/Filter/FilterSection';
 import ai_logo from '../assets/images/icons/ai_logo.svg';
 import { createSortingIndex } from '../db/Indexes';
+import './DashboardElements/logs.css'
+import LogCard from './LogCards/LogCard';
 
 const q = faunadb.query;
 
@@ -86,36 +88,39 @@ const Logs = () => {
           <FilterSection />
         </section>
         <div style={{height:'fitContent', overflowY:'scroll', borderRadius:'16px', margin:'20px 20px'}}>
+          {/* Comment */}
+
           {logs.map((log, index) => (
-            <Card key={index} style={{ position: 'relative', marginBottom: '8px', height:'150px' }}>
-              <Card.Header style={{ paddingBottom: '3px' }}>
-                {log.data.applicationName}
-              </Card.Header>
-              <cite
-                style={{ position: 'absolute', right: '40px', top: '20px' }}
-                title="Source Title"> {new Date(log.data.timestamp.value).toLocaleString()}
-              </cite>
-              <Card.Body style={{ paddingTop: '2px'}}>
-                <h6>{log.data.logLevel} - {log.data.errorCode}</h6>
-                <Card.Text className="mb-0">
-                  {log.data.message}
-                </Card.Text>
-                {/* <Alert
-                  variant="dark"
-                  size="sm"
-                  style={{ position: 'absolute', right: '40px', bottom: '20px', height: '44px' }}
-                >
-                  <img src={ai_logo} alt="logo" style={{ width: '42px', marginTop: '-5px', marginLeft: '-5px', marginRight: '5px' }} />
-                  Suggest Solutions
-                </Alert> */}
-              </Card.Body>
-              <Card.Footer className="blockquote-footer" style={{ visibility:'hidden'}}>
-                <strong>Additional Info:</strong>
-                {Object.entries(log.data.additionalInfo).map(([key, value]) => (
-                  <li key={key}>{key}: {value}</li>
-                ))}
-              </Card.Footer>
-            </Card>
+            <LogCard />
+            // <Card key={index} style={{ position: 'relative', marginBottom: '8px', height:'150px' }}>
+            //   <Card.Header style={{ paddingBottom: '3px' }}>
+            //     {log.data.applicationName}
+            //   </Card.Header>
+            //   <cite
+            //     style={{ position: 'absolute', right: '40px', top: '20px' }}
+            //     title="Source Title"> {new Date(log.data.timestamp.value).toLocaleString()}
+            //   </cite>
+            //   <Card.Body style={{ paddingTop: '2px'}}>
+            //     <h6>{log.data.logLevel} - {log.data.errorCode}</h6>
+            //     <Card.Text className="mb-0">
+            //       {log.data.message}
+            //     </Card.Text>
+            //     {/* <Alert
+            //       variant="dark"
+            //       size="sm"
+            //       style={{ position: 'absolute', right: '40px', bottom: '20px', height: '44px' }}
+            //     >
+            //       <img src={ai_logo} alt="logo" style={{ width: '42px', marginTop: '-5px', marginLeft: '-5px', marginRight: '5px' }} />
+            //       Suggest Solutions
+            //     </Alert> */}
+            //   </Card.Body>
+            //   <Card.Footer className="blockquote-footer" style={{ visibility:'hidden'}}>
+            //     <strong>Additional Info:</strong>
+            //     {Object.entries(log.data.additionalInfo).map(([key, value]) => (
+            //       <li key={key}>{key}: {value}</li>
+            //     ))}
+            //   </Card.Footer>
+            // </Card>
           ))}
         </div>
       </main>
