@@ -91,7 +91,7 @@ const Logs = () => {
           {/* Comment */}
 
           {logs.map((log, index) => (
-            <LogCard />
+            <LogCard index={index} log={log}/>
             // <Card key={index} style={{ position: 'relative', marginBottom: '8px', height:'150px' }}>
             //   <Card.Header style={{ paddingBottom: '3px' }}>
             //     {log.data.applicationName}

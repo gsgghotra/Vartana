@@ -37,9 +37,20 @@
     letter-spacing: 0.11cap;
     height: 28px;
   }
+
+  .er-card-tagpill{
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 5px 10px;
+    letter-spacing: 0.11cap;
+    height: 28px;
+  }
   
   .high-priority-card {
-    background-color: #868686;
+    background-color: #be5656;
     font-weight: bold;
     color: #ffffff;
   }
